@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pam_login_app.R
@@ -32,6 +33,8 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
+            }else{
+                Toast.makeText(this,"Login Gagal",Toast.LENGTH_SHORT).show()
             }
         }
     }
